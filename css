@@ -1,0 +1,59 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section {
+    border: 1px solid black;
+    padding: 20px;
+    position: relative;
+    background-color: lightgray;
+}
+
+/* Section Title Styling */
+.section h2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: orange;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+/* Desktop View (Three equal sections) */
+@media (min-width: 992px) {
+    .section {
+        float: left;
+        width: 33.33%;
+    }
+}
+
+/* Tablet View (Two sections in one row, one in second row) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 50%;
+        float: left;
+    }
+    .section:last-child {
+        width: 100%;
+    }
+}
+
+/* Mobile View (Each section takes full width) */
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+    }
+}
